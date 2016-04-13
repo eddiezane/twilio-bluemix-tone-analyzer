@@ -71,8 +71,6 @@ public class SimpleServlet extends HttpServlet {
         Files.copy(inputStream, tempFile, StandardCopyOption.REPLACE_EXISTING);
 
         SpeechToText speechToText = new SpeechToText();
-        // TODO: Replace with your Speech to Text credentials
-        speechToText.setUsernameAndPassword("your-secret-very-long-string", "secretpassword");
 
         RecognizeOptions recognizeOptions = new RecognizeOptions();
         recognizeOptions.model("en-US_NarrowbandModel");
@@ -81,8 +79,6 @@ public class SimpleServlet extends HttpServlet {
         String transcription = speechResults.getResults().get(0).getAlternatives().get(0).getTranscript();
 
         ToneAnalyzer toneAnalyzer = new ToneAnalyzer(ToneAnalyzer.VERSION_DATE_2016_02_11);
-        // TODO: Replace with your Tone Analyzer credentials
-        toneAnalyzer.setUsernameAndPassword("your-secret-very-long-string", "secretpassword");
 
         ToneAnalysis toneAnalysis = toneAnalyzer.getTone(transcription);
 
