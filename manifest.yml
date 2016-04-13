@@ -1,0 +1,19 @@
+---
+declared-services:
+  my-speech-to-text:
+    label: speech_to_text
+    plan: standard
+  my-tone-analyzer:
+    label: tone_analyzer
+    plan: beta
+applications:
+- path: target/JavaHelloWorldApp.war
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: TwilioBluemixApp
+  host: twiliobluemixapp
+  disk_quota: 1024M
+  services:
+    - my-speech-to-text
+    - my-tone-analyzer

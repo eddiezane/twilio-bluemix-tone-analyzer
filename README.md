@@ -1,5 +1,7 @@
 # Identify customer emotions using IBM Bluemix + Watson
 
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https%3A%2F%2Fgithub.com%2Feddiezane%2Ftwilio-bluemix-tone-analyzer&branch=bluemix-button)
+
 # Notice
 
 Skeleton Java App © Copyright IBM Corporation 2014.
